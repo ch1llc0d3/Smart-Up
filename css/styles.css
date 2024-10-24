@@ -1,66 +1,86 @@
+:root {
+    --color-white: #FFFF; 
+    --color-yellow: #FABC3F;
+    --color-orange: #E85C0D;
+    --color-red: #C7253E;
+    --color-dark-red: #821131;
+    --color-yellow-rgb: rgb(250, 188, 63);
+    --color-orange-rgb: rgb(232, 92, 13)8C;
+    --color-red-rgb: rgb(199, 37, 62);
+    --color-dark-red-rgb: rgb(130, 17, 49);
+}
+
+
 body {
-    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-dark-red); /* Deep red background */
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+    color: var(--color-yellow); /* Yellow text for contrast */
     margin: 0;
     padding: 0;
-    background-color: orangered;
-    color: #333;
-    line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Roboto Slab', serif;
-    color: white;
-    text-align: center;
-    margin-bottom: 10px;
+    font-family: Georgia, serif;
+    font-size: 60px;
+    color: var(--color-white); /* Bright yellow headings */
+    margin: 20px 0;
 }
 
-p, ul {
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+p, li {
     margin-bottom: 20px;
+    color: var(--color-white); /* Consistent yellow for text */
 }
 
 a {
-    color: #ffffff;
+    color: var(--color-orange); /* Orange links for visibility */
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
+    color: var(--color-red); /* Change to red on hover */
 }
 
-/* Navigation Bar */
-navbar {
-    background-color: #2c3e50;
+/* Navigation */
+.topnav {
+    background-color: var(--color-red); /* Red navigation background */
+    overflow: hidden;
     padding: 10px;
+    position: sticky;
+    top: 0;
 }
 
-navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
+.topnav a {
+    float: left;
+    color: var(--color-yellow); /* Yellow text for contrast */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-navbar ul li {
-    margin: 0;
+.topnav a:hover {
+    background-color: var(--color-orange); /* Orange on hover */
+    color: var(--color-dark-red);
 }
 
-navbar ul li a {
-    color: white;
-    font-size: 18px;
-    padding: 10px;
+.topnav a.active {
+    background-color: var(--color-orange);
+    color: var(--color-yellow);
 }
 
-navbar ul li a:hover {
-    background-color: #4CAF50;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-/* Header Section */ 
+/* Header */
 header {
-    background: #d6c915;
-    color: white;
+    background-color: var(--color-orange);
+    color: var(--color-yellow);
     padding: 50px 0;
     text-align: center;
 }
@@ -75,37 +95,39 @@ header p {
 }
 
 .cta-button {
-    background-color: white;
-    color: #4CAF50;
+    background-color: var(--color-yellow);
+    color: var(--color-dark-red);
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 18px;
     text-decoration: none;
+    margin-top: 20px;
 }
 
 .cta-button:hover {
-    background-color: #333;
-    color: white;
+    background-color: var(--color-orange);
+    color: var(--color-yellow);
 }
 
-/* Section Styles */ 
+/* Section Styles */
 section {
-    background-color: white;
+    background-color: var(--color-red); /* Red section background */
     padding: 40px 20px;
     margin: 20px auto;
     max-width: 1000px;
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 section h2 {
     font-size: 32px;
+    color: var(--color-yellow); /* Yellow for section titles */
     margin-bottom: 20px;
 }
 
 section p, section ul {
     font-size: 18px;
-    color: #666;
+    color: var(--color-yellow);
 }
 
 ul {
@@ -114,10 +136,10 @@ ul {
 
 ul li {
     margin-bottom: 10px;
-    line-height: 12px;
+    line-height: 1.5;
 }
 
-/* Contact Form Styles */ 
+/* Contact Form */
 form {
     display: flex;
     flex-direction: column;
@@ -127,16 +149,17 @@ form {
 form input[type="text"],
 form input[type="email"],
 form textarea {
-    padding: 0px;
-    border: 1px solid #ddd;
+    padding: 10px;
+    border: 1px solid var(--color-white);
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
+    background-color: var(--color-light);
 }
 
 form input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--color-orange);
+    color: var(--color-yellow);
     padding: 10px;
     font-size: 18px;
     border: none;
@@ -145,13 +168,14 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #333;
+    background-color: var(--color-red);
+    color: var(--color-yellow);
 }
 
-/* Footer */ 
+/* Footer */
 footer {
-    background-color: #2c3e50;
-    color: white;
+    background-color: var(--color-dark-red);
+    color: var(--color-yellow);
     text-align: center;
     padding: 20px;
 }
